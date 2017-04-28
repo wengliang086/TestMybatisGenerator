@@ -9,7 +9,7 @@
 		 <!-- 
 		 -->
 		<commentGenerator>
-			<property name="suppressAllComments" value="true"/>
+			<property name="suppressAllComments" value="false"/>
 			<property name="suppressDate" value="true"/>
 		</commentGenerator>
 		 <!-- 注释控制完毕 -->
