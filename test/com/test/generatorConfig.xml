@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" 
+"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<properties resource="com/test/init.properties" />
+	<classPathEntry location="${classPathEntry}" />
+	<context id="context1">
+		 <!-- 为了防止生成的代码中有很多注释，比较难看，加入下面的配置控制 -->
+		 <!-- 
+		 -->
+		<commentGenerator>
+			<property name="suppressAllComments" value="true"/>
+			<property name="suppressDate" value="true"/>
+		</commentGenerator>
+		 <!-- 注释控制完毕 -->
+	
+		<jdbcConnection driverClass="${driverClass}" connectionURL="${connectionURL}" userId="${user}" password="${password}" />
+		<!-- 数据表对应的model 层  -->
+		<javaModelGenerator targetPackage="${targetPackage}.vo" targetProject="${voPackage}" />
+		<sqlMapGenerator targetPackage="${targetPackage}.mapper" targetProject="${targetProject}" />
+		<javaClientGenerator targetPackage="${targetPackage}.mapper" type="XMLMAPPER" targetProject="${targetProject}" />
+		
+		<table tableName="user" schema="mybatis" domainObjectName="UserBean" />
+	</context>
+</generatorConfiguration>
